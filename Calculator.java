@@ -21,30 +21,67 @@ package cse360assign2;
  *
  */
 public class Calculator {
+	
+	/** 
+	 * total is a class variable that is the current numerical total of all 
+	 * operations performed.  
+	 */
 	private int total;
 	
+	/**
+	 * Initializes total variable as 0 when a new Calculator object is 
+	 * instantiated
+	 */
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
 	}
 	
+	/**
+	 * Returns the current total numerical value from all operations performed 
+	 * @return total
+	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
+	/**
+	 * Adds the parameter to the total variable
+	 * @param value
+	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
+	/**
+	 * Subtracts the parameter from the total variable
+	 * @param value
+	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
+	/**
+	 * Multiplies the total by the parameter
+	 * @param value
+	 */
 	public void multiply (int value) {
-		
+		total = total*value;
 	}
 	
+	/**
+	 * Divides the total by the parameter. If the parameter is 0 then the total
+	 * is set to 0. Method uses integer division.  
+	 * @param value
+	 */
 	public void divide (int value) {
-		
+		if (value == 0)
+		{
+			total = 0;
+		}
+		else
+		{
+			total = total/value;
+		}
 	}
 	
 	public String getHistory () {
