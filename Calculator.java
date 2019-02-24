@@ -25,8 +25,11 @@ public class Calculator {
 	/** 
 	 * total is a class variable that is the current numerical total of all 
 	 * operations performed.  
+	 * history is a class variable that is the history of all actions as a 
+	 * string.
 	 */
 	private int total;
+	private String history = "0";
 	
 	/**
 	 * Initializes total variable as 0 when a new Calculator object is 
@@ -46,31 +49,38 @@ public class Calculator {
 	
 	/**
 	 * Adds the parameter to the total variable
+	 * Adds addition action to history string
 	 * @param value
 	 */
 	public void add (int value) {
 		total = total + value;
+		history = history + " + " + value;
 	}
 	
 	/**
 	 * Subtracts the parameter from the total variable
+	 * Adds subtraction action to history string
 	 * @param value
 	 */
 	public void subtract (int value) {
 		total = total - value;
+		history = history + " - " +  value;
 	}
 	
 	/**
 	 * Multiplies the total by the parameter
+	 * Adds multiplication action to history string
 	 * @param value
 	 */
 	public void multiply (int value) {
 		total = total*value;
+		history = history + " * " + value;
 	}
 	
 	/**
 	 * Divides the total by the parameter. If the parameter is 0 then the total
-	 * is set to 0. Method uses integer division.  
+	 * is set to 0. Method uses integer division. 
+	 * Adds division action to history string 
 	 * @param value
 	 */
 	public void divide (int value) {
@@ -82,10 +92,16 @@ public class Calculator {
 		{
 			total = total/value;
 		}
+		history = history + " / " + value;
 	}
 	
+	/**
+	 * Returns class variable history which is the history of all actions as a 
+	 * String. The return String separates all operations and values with a space
+	 * @return history
+	 */
 	public String getHistory () {
-		return "";
+		return history;
 	}
 
 }
