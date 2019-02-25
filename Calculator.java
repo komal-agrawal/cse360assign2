@@ -9,7 +9,7 @@
  * getHistory method that returns the history of all actions as a String. 
  * 
  * @author Komal Agrawal
- * @since 2019-02-24
+ * @since 2019-02-25
  */
 package cse360assign2;
 
@@ -20,7 +20,8 @@ package cse360assign2;
  * getHistory method. 
  *
  */
-public class Calculator {
+public class Calculator 
+{
 	
 	/** 
 	 * total is a class variable that is the current numerical total of all 
@@ -35,7 +36,8 @@ public class Calculator {
 	 * Initializes total variable as 0 when a new Calculator object is 
 	 * instantiated
 	 */
-	public Calculator () {
+	public Calculator () 
+	{
 		total = 0;  // not needed - included for clarity
 	}
 	
@@ -43,7 +45,8 @@ public class Calculator {
 	 * Returns the current total numerical value from all operations performed 
 	 * @return total
 	 */
-	public int getTotal () {
+	public int getTotal () 
+	{
 		return total;
 	}
 	
@@ -52,7 +55,8 @@ public class Calculator {
 	 * Adds addition action to history string
 	 * @param value
 	 */
-	public void add (int value) {
+	public void add (int value) 
+	{
 		total = total + value;
 		history = history + " + " + value;
 	}
@@ -62,7 +66,8 @@ public class Calculator {
 	 * Adds subtraction action to history string
 	 * @param value
 	 */
-	public void subtract (int value) {
+	public void subtract (int value) 
+	{
 		total = total - value;
 		history = history + " - " +  value;
 	}
@@ -72,8 +77,9 @@ public class Calculator {
 	 * Adds multiplication action to history string
 	 * @param value
 	 */
-	public void multiply (int value) {
-		total = total*value;
+	public void multiply (int value) 
+	{
+		total = total * value;
 		history = history + " * " + value;
 	}
 	
@@ -83,14 +89,15 @@ public class Calculator {
 	 * Adds division action to history string 
 	 * @param value
 	 */
-	public void divide (int value) {
+	public void divide (int value) 
+	{
 		if (value == 0)
 		{
 			total = 0;
 		}
 		else
 		{
-			total = total/value;
+			total = total / value;
 		}
 		history = history + " / " + value;
 	}
@@ -100,7 +107,8 @@ public class Calculator {
 	 * String. The return String separates all operations and values with a space
 	 * @return history
 	 */
-	public String getHistory () {
+	public String getHistory () 
+	{
 		return history;
 	}
 
